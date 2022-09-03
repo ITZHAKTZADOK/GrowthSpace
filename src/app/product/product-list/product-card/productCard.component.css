@@ -1,0 +1,18 @@
+.product-img{
+  max-height: 50px;
+  margin-right: 10px;
+}
+.card-container{
+  display: flex;
+  justify-content: space-between;
+}
+.image-decription-container{
+  display: flex;
+  align-items: center;
+}
+.delete-button{
+  align-self: flex-end;
+}
+.mat-card{
+  margin-bottom: 10px;
+}

@@ -1,0 +1,14 @@
+
+<div class="addItem">
+  <div class="button">
+    <button (click)="onAddProduct()" mat-raised-button color="primary"> Add </button>
+  </div>
+  <div class="search">
+    <mat-form-field class="search-input" appearance="outline">
+      <mat-label>Search Product</mat-label>
+      <input  (input)="filterProduct($event)" matInput >
+    </mat-form-field>
+  </div>
+
+</div>
+

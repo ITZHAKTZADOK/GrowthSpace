@@ -1,0 +1,44 @@
+<mat-card>
+  <img class="product-img" src="../../../assets/images/tree-736885__480.jpg" />
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <div>
+      <div>
+        <label>Name</label>
+      </div>
+      <mat-form-field class="text-inputs" appearance="outline">
+        <input
+          type="text"
+          formControlName="name"
+          matInput >
+      </mat-form-field>
+    </div>
+    <div>
+      <div>
+        <label>Description</label>
+      </div>
+      <mat-form-field  class="text-inputs" appearance="outline">
+        <textarea
+          formControlName="description"
+          matInput></textarea>
+      </mat-form-field>
+    </div>
+    <div>
+      <div>
+        <label>Price</label>
+      </div>
+      <mat-form-field  appearance="outline">
+        <input
+          formControlName="price"
+          type="number"
+          matInput >
+      </mat-form-field>
+    </div>
+    <button type="submit"
+            mat-raised-button
+            color="primary"
+    [disabled]="!productForm.valid">
+      {{editMode ? 'Save' : 'Add'}}
+    </button>
+  </form>
+
+</mat-card>

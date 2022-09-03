@@ -1,0 +1,18 @@
+<mat-card [ngStyle]="{'background-color': (isEditMode && product.id===selectedProduct?.id) ? 'grey' : ''}">
+  <div class="card-container" (click)="onProductSelect()"
+  >
+    <div class="image-decription-container">
+      <div>
+        <img class="product-img" src="../../../../assets/images/tree-736885__480.jpg" />
+      </div>
+      <div>
+        <h1>{{product.name}}</h1>
+        <p>{{product.description}}</p>
+      </div>
+    </div>
+    <div class="delete-button">
+      <button mat-raised-button color="warn" (click)="onProductDelete()"> Delete </button>
+    </div>
+  </div>
+</mat-card>
+
