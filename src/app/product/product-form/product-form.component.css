@@ -4,3 +4,9 @@
 .text-inputs{
   width: 100%
 }
+.product-form-label{
+  display: block;
+}
+.form-name-input{
+  font-size: 10px;
+}

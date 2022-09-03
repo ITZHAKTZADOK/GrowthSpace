@@ -4,11 +4,11 @@ import {Product} from "../product.model";
 import {Subscription} from "rxjs";
 
 @Component({
-  selector: 'app-add-item',
-  templateUrl: './add-item.component.html',
-  styleUrls: ['./add-item.component.css']
+  selector: 'app-actions-bar',
+  templateUrl: './actions-bar.component.html',
+  styleUrls: ['./actions-bar.component.css']
 })
-export class AddItemComponent implements OnInit {
+export class ActionsBarComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {

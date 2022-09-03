@@ -1,17 +1,6 @@
 <div [hidden]=loading>
   <app-header></app-header>
-  <div class="main">
-    <app-add-item></app-add-item>
-    <div class="product-container">
-      <div class="product-list">
-        <app-product-list></app-product-list>
-      </div>
-      <div class="product-form">
-        <app-product-form></app-product-form>
-      </div>
-    </div>
-
-  </div>
+  <router-outlet></router-outlet>
 </div>
 
 <div class="spinner" *ngIf="loading">

@@ -1,9 +1,9 @@
 
-<div class="addItem">
-  <div class="button">
+<div class="actions-bar">
+  <div class="add-button">
     <button (click)="onAddProduct()" mat-raised-button color="primary"> Add </button>
   </div>
-  <div class="search">
+  <div>
     <mat-form-field class="search-input" appearance="outline">
       <mat-label>Search Product</mat-label>
       <input  (input)="filterProduct($event)" matInput >

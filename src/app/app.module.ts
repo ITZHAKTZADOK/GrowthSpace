@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
-import { AddItemComponent } from './product/add-item/add-item.component';
+import { ActionsBarComponent } from './product/actions-bar/actions-bar.component';
 import {MatInputModule} from '@angular/material/input';
 import { ProductCardComponent } from './product/product-list/product-card/productCard.component';
 import {MatCardModule} from '@angular/material/card';
@@ -16,15 +16,17 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import {ProductService} from "./product/product.service";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { ProductsPageComponent } from './products-page/products-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    AddItemComponent,
+    ActionsBarComponent,
     ProductCardComponent,
     ProductFormComponent,
     ProductListComponent,
+    ProductsPageComponent,
   ],
   imports: [
     BrowserModule,

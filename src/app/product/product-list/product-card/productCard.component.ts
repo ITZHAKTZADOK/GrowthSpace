@@ -35,7 +35,7 @@ export class ProductCardComponent implements OnInit, OnDestroy {
     this.productService.editMode.next(true)
   }
   onProductDelete(){
-    this.productService.deleteProduct(this.product.id)
+    this.productService.deleteProduct(this.product?.id)
   }
   ngOnDestroy() {
     this.selectedProductSubscription.unsubscribe()

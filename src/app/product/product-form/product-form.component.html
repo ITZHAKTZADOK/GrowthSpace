@@ -1,11 +1,9 @@
 <mat-card>
-  <img class="product-img" src="../../../assets/images/tree-736885__480.jpg" />
+  <img class="product-img" src="/assets/images/tree-736885__480.jpg" />
   <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
     <div>
-      <div>
-        <label>Name</label>
-      </div>
-      <mat-form-field class="text-inputs" appearance="outline">
+        <label class="product-form-label" >Name</label>
+      <mat-form-field class="text-inputs form-name-input" appearance="outline">
         <input
           type="text"
           formControlName="name"
@@ -13,9 +11,7 @@
       </mat-form-field>
     </div>
     <div>
-      <div>
-        <label>Description</label>
-      </div>
+        <label class="product-form-label">Description</label>
       <mat-form-field  class="text-inputs" appearance="outline">
         <textarea
           formControlName="description"
@@ -23,9 +19,7 @@
       </mat-form-field>
     </div>
     <div>
-      <div>
-        <label>Price</label>
-      </div>
+        <label class="product-form-label">Price</label>
       <mat-form-field  appearance="outline">
         <input
           formControlName="price"

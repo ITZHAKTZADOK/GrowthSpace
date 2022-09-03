@@ -26,7 +26,6 @@ export class ProductFormComponent implements OnInit, OnDestroy {
       this.initForm()
     })
     this.initForm()
-
   }
 
   private initForm(){
@@ -35,14 +34,20 @@ export class ProductFormComponent implements OnInit, OnDestroy {
       'description': new FormControl(this.editMode ? this.selectedProduct.description : ''),
       'price': new FormControl(this.editMode ? this.selectedProduct.price : '')
     })
-    this.productForm.markAsPristine();
-    this.productForm.markAsUntouched();
   }
+
   onSubmit(){
     if(this.editMode){
-      this.productService.updateProduct(this.productForm.value, this.selectedProduct.id)
+      this.selectedProduct = {
+        id: this.selectedProduct.id,
+        ...this.productForm.value,
+      }
+      this.productService.updateProduct(this.selectedProduct)
     }else{
-      this.productService.addProduct(this.productForm.value)
+      const product: Product = new Product(this.productForm.get('name')?.value,
+        this.productForm.get('description')?.value,
+        this.productForm.get('price')?.value)
+      this.productService.addProduct(product)
     }
   }
 

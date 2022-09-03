@@ -1,0 +1,28 @@
+.product-container {
+  display: flex;
+}
+
+.product-list{
+  width: 50%;
+  margin-right: 20px;
+}
+.product-form{
+  width: 50%;
+}
+.main{
+  margin: 0 5%;
+}
+
+@media only screen and (max-width: 600px) {
+  .product-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .product-list{
+    width:100%;
+    margin-bottom: 20px;
+  }
+  .product-form{
+    width: 100%;
+  }
+}
